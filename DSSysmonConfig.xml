@@ -1,0 +1,445 @@
+<Sysmon schemaversion="4.1">
+    <HashAlgorithms>*</HashAlgorithms>
+    <CheckRevocation/>
+    <EventFiltering>
+        <ProcessCreate onmatch="include">
+            <Image condition="image">AccessChk.exe</Image> <!--Microsoft:Windows: technique_id=T1083,technique_name=File and Directory Discovery-->
+            <Image condition="image">AccessEnum.exe</Image><!--Microsoft:Windows: technique_id=T1083,technique_name=File and Directory Discovery-->
+            <Image condition="image">CMSTP.exe</Image><!--Microsoft:Windows: technique_id=T1191,technique_name=CMSTP-->
+            <Image condition="image">InstallUtil.exe</Image><!--Microsoft:Windows: technique_id=T1118,technique_name=InstallUtil-->
+            <Image condition="image">LoadOrder.exe</Image><!--Microsoft:Windows: technique_id=T1007,technique_name=System Service Discovery-->
+            <Image condition="image">LogonSessions.exe</Image><!--Microsoft:Windows: technique_id=T1033,technique_name=System Owner/User Discovery-->
+            <Image condition="image">MSBuild.exe</Image><!--Microsoft:Windows: technique_id=T1127,technique_name=Trusted Developer Utilities-->
+            <Image condition="image">Mavinject.exe</Image><!--Microsoft:Windows: technique_id=T1218,technique_name=Signed Binary Proxy Execution-->
+            <Image condition="image">MpCmdRun.exe</Image><!--Microsoft:Windows: technique_id=T1089,technique_name=Disabling Security Tools-->
+            <Image condition="image">PipeList.exe</Image><!--Microsoft:Windows: technique_id=T1057,technique_name=Process Discovery-->
+            <Image condition="image">ProcDump.exe</Image><!--Microsoft:Windows: technique_id=T1003,technique_name=Credential Dumping-->
+            <Image condition="image">PsExec.exe</Image><!--Microsoft:Windows: technique_id=T1035,technique_name=Service Execution-->
+            <Image condition="image">PAExec.exe</Image>
+			<Image condition="image">PsFile.exe</Image><!--Microsoft:Windows: technique_id=T1105,technique_name=Remote File Copy-->
+            <Image condition="image">PsGetSID.exe</Image><!--Microsoft:Windows: technique_id=T1033,technique_name=System Owner/User Discovery-->
+            <Image condition="image">PsInfo.exe</Image><!--Microsoft:Windows: technique_id=T1057,technique_name=Process Discovery-->
+            <Image condition="image">PsKill.exe</Image><!--Microsoft:Windows: technique_id=T1089,technique_name=Disabling Security Tools-->
+            <Image condition="image">PsList.exe</Image><!--Microsoft:Windows: technique_id=T1057,technique_name=Process Discovery-->
+            <Image condition="image">PsLogList.exe</Image><!--Microsoft:Windows: technique_id=T1005,technique_name=Data from Local System-->
+            <Image condition="image">PsLoggedOn.exe</Image><!--Microsoft:Windows: technique_id=T1033,technique_name=System Owner/User Discovery-->
+            <Image condition="image">PsPasswd.exe</Image><!--Microsoft:Windows: technique_id=T1098,technique_name=Account Manipulation-->
+            <Image condition="image">PsService.exe</Image><!--Microsoft:Windows: technique_id=T1007,technique_name=System Service Discovery-->
+            <Image condition="image">ShellRunas.exe</Image><!--Microsoft:Windows: technique_id=T1088,technique_name=Bypass User Account Control-->
+            <Image condition="image">SyncAppvPublishingServer.exe</Image><!--Microsoft:Windows: technique_id=T1218,technique_name=Signed Binary Proxy Execution-->
+            <Image condition="image">attrib.exe</Image><!--Microsoft:Windows: technique_id=T1158,technique_name=Hidden Files and DirectoriesHidden Files and Directories-->
+            <Image condition="image">bash.exe</Image><!--Microsoft:Windows: technique_id=T1202,technique_name=Indirect Command Execution-->
+            <Image condition="image">bitsadmin.exe</Image><!--Microsoft:Windows: technique_id=T1197,technique_name=BITS Jobs-->
+            <Image condition="image">cmd.exe</Image><!--Microsoft:Windows: technique_id=T1059,technique_name=Command-Line Interface-->
+            <Image condition="image">cmdkey.exe</Image><!--Microsoft:Windows: -->
+            <Image condition="image">cscript.exe</Image><!--Microsoft:Windows: technique_id=T1202,technique_name=Indirect Command Execution-->
+            <Image condition="image">fltMC.exe</Image><!--Microsoft:Windows: technique_id=T1054,technique_name=Indicator Blocking-->
+            <Image condition="image">hh.exe</Image><!--Microsoft:Windows: -->
+            <Image condition="image">ipconfig.exe</Image><!--Microsoft:Windows: technique_id=T1016,technique_name=System Network Configuration Discovery-->
+            <Image condition="image">klist.exe</Image><!--Microsoft:Windows: -->
+            <Image condition="image">mshta.exe</Image><!--Microsoft:Windows: technique_id=T1170,technique_name=Mshta-->
+            <Image condition="image">nbtstat.exe</Image><!--Microsoft:Windows: technique_id=T1016,technique_name=System Network Configuration Discovery-->
+            <Image condition="image">net.exe</Image><!--Microsoft:Windows: technique_id=T1018,technique_name=Remote System Discovery-->
+            <Image condition="image">net1.exe</Image><!--Microsoft:Windows: technique_id=T1069,technique_name=Permission Groups Discovery-->
+            <Image condition="image">netsh.exe</Image><!--Microsoft:Windows: technique_id=T1063,technique_name=Security Software Discovery-->
+            <Image condition="image">netstat.exe</Image><!--Microsoft:Windows: technique_id=T1049,technique_name=System Network Connections Discovery-->
+            <Image condition="image">nslookup.exe</Image><!--Microsoft:Windows: technique_id=T1016,technique_name=System Network Configuration Discovery-->
+            <Image condition="image">odbcconf.exe</Image>
+            <Image condition="image">pcalua.exe</Image><!--Microsoft:Windows: technique_id=T1202,technique_name=Indirect Command Execution-->
+            <Image condition="image">powershell.exe</Image><!--Microsoft:Windows: technique_id=T1086,technique_name=PowerShell-->
+            <Image condition="image">qprocess.exe</Image><!--Microsoft:Windows: technique_id=T1057,technique_name=Process Discovery-->
+            <Image condition="image">query.exe</Image><!--Microsoft:Windows: technique_id=T1057,technique_name=Process Discovery-->
+            <Image condition="image">quser.exe</Image><!--Microsoft:Windows: technique_id=T1033,technique_name=System Owner/User Discovery-->
+            <Image condition="image">qwinsta.exe</Image><!--Microsoft:Windows: technique_id=T1057,technique_name=Process Discovery-->
+            <Image condition="image">reg.exe</Image><!--Microsoft:Windows: technique_id=T1112,technique_name=Modify Registry-->
+            <Image condition="image">regasm.exe</Image><!--Microsoft:Windows: technique_id=T1121,technique_name=Regsvcs/Regasm-->
+            <Image condition="image">regsvcs.exe</Image><!--Microsoft:Windows: technique_id=T1121,technique_name=Regsvcs/Regasm-->
+            <Image condition="image">regsvr32.exe</Image><!--Microsoft:Windows: technique_id=T1117,technique_name=Regsvr32-->
+            <Image condition="image">replace.exe</Image><!--Microsoft:Windows: technique_id=T1218,technique_name=Signed Binary Proxy Execution-->
+            <Image condition="image">route.exe</Image><!--Microsoft:Windows: technique_id=T1016,technique_name=System Network Configuration Discovery-->
+            <Image condition="image">ru.exe</Image><!--Microsoft:Windows: technique_id=T1012,technique_name=Query Registry-->
+            <Image condition="image">runas.exe</Image><!--Microsoft:Windows: technique_id=T1134,technique_name=Access Token Manipulation-->
+            <Image condition="image">rwinsta.exe</Image><!--Microsoft:Windows: technique_id=T1057,technique_name=Process Discovery-->
+            <Image condition="image">sc.exe</Image><!--Microsoft:Windows: technique_id=T1031,technique_name=Modify Existing Service-->
+            <Image condition="image">schtasks.exe</Image>
+            <Image condition="image">sdbinst.exe</Image><!--Microsoft:Windows: technique_id=T1138,technique_name=Application Shimming-->
+            <Image condition="image">sysinfo.exe</Image><!--Microsoft:Windows: technique_id=T1033,technique_name=System Owner/User Discovery-->
+            <Image condition="image">taskeng.exe</Image><!--Microsoft:Windows: technique_id=T1053,technique_name=Scheduled Task-->
+            <Image condition="image">taskkill.exe</Image><!--Microsoft:Windows: -->
+            <Image condition="image">tasklist.exe</Image><!--Microsoft:Windows: technique_id=T1057,technique_name=Process Discovery-->
+            <Image condition="image">tracert.exe</Image><!--Microsoft:Windows: -->
+            <Image condition="image">tree.com</Image><!--Microsoft:Windows: -->
+            <Image condition="image">wevtutil.exe</Image><!--Microsoft:Windows: technique_id=T1070,technique_name=Indicator Removal on Host-->
+            <Image condition="image">whoami.exe</Image><!--Microsoft:Windows: technique_id=T1033,technique_name=System Owner/User Discovery-->
+            <Image condition="image">winrm.cmd</Image><!--Microsoft:Windows: technique_id=T1028,technique_name=Windows Remote Management-->
+            <Image condition="image">wscript.exe</Image><!--Microsoft:Windows: technique_id=T1202,technique_name=Indirect Command Execution-->
+            <Image condition="image">wsmprovhost.exe</Image><!--Microsoft:Windows: technique_id=T1028,technique_name=Windows Remote Management-->
+            <Image condition="begin with">C:\$Recycle.bin\</Image><!--Microsoft:Windows: technique_id=T1036,technique_name=Masquerading-->
+            <Image condition="begin with">C:\Intel\Logs\</Image><!--Microsoft:Windows: technique_id=T1036,technique_name=Masquerading-->
+            <Image condition="begin with">C:\PerfLogs\</Image><!--Microsoft:Windows: technique_id=T1036,technique_name=Masquerading-->
+            <Image condition="begin with">C:\Users\Default\</Image><!--Microsoft:Windows: technique_id=T1036,technique_name=Masquerading-->
+            <Image condition="begin with">C:\Users\NetworkService\</Image><!--Microsoft:Windows: technique_id=T1036,technique_name=Masquerading-->
+            <Image condition="begin with">C:\Users\Public\</Image><!--Microsoft:Windows: technique_id=T1036,technique_name=Masquerading-->
+            <Image condition="begin with">C:\Windows\Debug\</Image><!--Microsoft:Windows: technique_id=T1036,technique_name=Masquerading-->
+            <Image condition="begin with">C:\Windows\Fonts\</Image><!--Microsoft:Windows: technique_id=T1036,technique_name=Masquerading-->
+            <Image condition="begin with">C:\Windows\Help\</Image><!--Microsoft:Windows: technique_id=T1036,technique_name=Masquerading-->
+            <Image condition="begin with">C:\Windows\Media\</Image><!--Microsoft:Windows: technique_id=T1036,technique_name=Masquerading-->
+            <Image condition="begin with">C:\Windows\addins\</Image><!--Microsoft:Windows: technique_id=T1036,technique_name=Masquerading-->
+            <Image condition="begin with">C:\Windows\repair\</Image><!--Microsoft:Windows: technique_id=T1036,technique_name=Masquerading-->
+            <Image condition="begin with">C:\Windows\security\</Image><!--Microsoft:Windows: technique_id=T1036,technique_name=Masquerading-->
+            <Image condition="begin with">C:\Windows\system32\config\systemprofile\</Image><!--Microsoft:Windows: technique_id=T1036,technique_name=Masquerading-->
+            <Image condition="contains">\htdocs\</Image><!--Microsoft:Windows: technique_id=T1036,technique_name=Masquerading-->
+            <Image condition="contains">\wwwroot\</Image><!--Microsoft:Windows: technique_id=T1036,technique_name=Masquerading-->
+            <CommandLine condition="contains">-ma lsass.exe</CommandLine><!--Microsoft:Windows: technique_id=T1003,technique_name=Credential Dumping-->
+            <CommandLine condition="contains">/logfile= /LogToConsole=false /U</CommandLine><!--Microsoft:Windows: technique_id=T1118,technique_name=InstallUtil-->
+            <CommandLine condition="contains">Add-MpPreference</CommandLine><!--Microsoft:Windows: technique_id=T1089,technique_name=Disabling Security Tools-->
+            <CommandLine condition="contains">DisableIOAVProtection</CommandLine><!--Microsoft:Windows: technique_id=T1089,technique_name=Disabling Security Tools-->
+            <CommandLine condition="contains">RemoveDefinitions</CommandLine><!--Microsoft:Windows: technique_id=T1089,technique_name=Disabling Security Tools-->
+            <CommandLine condition="contains">control.exe /name</CommandLine><!--Microsoft:Windows: technique_id=T1196,technique_name=Control Panel Items-->
+            <CommandLine condition="contains">fltmc unload</CommandLine><!--Microsoft:Windows: technique_id=T1054,technique_name=Indicator Blocking-->
+            <CommandLine condition="contains">misc::mflt</CommandLine><!--Microsoft:Windows: technique_id=T1063,technique_name=Security Software Discovery-->
+            <CommandLine condition="contains">rundll32.exe shell32.dll,Control_RunDLL</CommandLine><!--Microsoft:Windows: technique_id=T1196,technique_name=Control Panel Items-->
+            <ParentImage condition="image">AtBroker.exe</ParentImage><!--Microsoft:Windows: technique_id=T1015,technique_name=Accessibility Features-->
+            <ParentImage condition="image">DisplaySwitch.exe</ParentImage><!--Microsoft:Windows: technique_id=T1015,technique_name=Accessibility Features-->
+            <ParentImage condition="image">Magnify.exe</ParentImage><!--Microsoft:Windows: technique_id=T1015,technique_name=Accessibility Features-->
+            <ParentImage condition="image">Narrator.exe</ParentImage><!--Microsoft:Windows: technique_id=T1015,technique_name=Accessibility Features-->
+            <ParentImage condition="image">cmd.exe</ParentImage><!--Microsoft:Windows: technique_id=T1059,technique_name=Command-Line Interface-->
+            <ParentImage condition="image">control.exe</ParentImage><!--Microsoft:Windows: technique_id=T1202,technique_name=Indirect Command Execution-->
+            <ParentImage condition="image">cscript.exe</ParentImage><!--Microsoft:Windows: technique_id=T1202,technique_name=Indirect Command Execution-->
+            <ParentImage condition="image">eventvwr.exe</ParentImage><!--Microsoft:Windows: technique_id=T1088,technique_name=Bypass User Account Control-->
+            <ParentImage condition="image">fodhelper.exe</ParentImage><!--Microsoft:Windows: technique_id=T1088,technique_name=Bypass User Account Control-->
+            <ParentImage condition="image">mshta.exe</ParentImage><!--Microsoft:Windows: technique_id=T1170,technique_name=Mshta-->
+            <ParentImage condition="image">osk.exe</ParentImage><!--Microsoft:Windows: technique_id=T1015,technique_name=Accessibility Features-->
+            <ParentImage condition="image">pcalua.exe</ParentImage><!--Microsoft:Windows: technique_id=T1202,technique_name=Indirect Command Execution-->
+            <ParentImage condition="image">powershell.exe</ParentImage><!--Microsoft:Windows: technique_id=T1086,technique_name=PowerShell-->
+            <ParentImage condition="image">powershell_ise.exe</ParentImage><!--Microsoft:Windows: technique_id=T1086,technique_name=PowerShell-->
+            <ParentImage condition="image">sethc.exe</ParentImage><!--Microsoft:Windows: technique_id=T1015,technique_name=Accessibility Features-->
+            <ParentImage condition="image">utilman.exe</ParentImage><!--Microsoft:Windows: technique_id=T1015,technique_name=Accessibility Features-->
+            <ParentImage condition="image">wmic.exe</ParentImage>
+			<ParentImage condition="image">wmiprvse.exe</ParentImage><!--Microsoft:Windows: technique_id=T1047,technique_name=Windows Management Instrumentation-->
+            <ParentImage condition="image">wscript.exe</ParentImage><!--Microsoft:Windows: technique_id=T1202,technique_name=Indirect Command Execution-->
+        </ProcessCreate>
+        <ProcessCreate onmatch="exclude">
+		<ParentImage condition="image">CollectGuestLogs.exe</ParentImage>
+        <Image condition="image">dsa.exe</Image>
+		</ProcessCreate>
+        <FileCreateTime onmatch="include">
+            <Image condition="begin with">C:\Temp</Image><!--Microsoft:Windows: technique_id=T1099,technique_name=Timestomp-->
+            <Image condition="begin with">C:\Tmp</Image><!--Microsoft:Windows: technique_id=T1099,technique_name=Timestomp-->
+            <Image condition="begin with">C:\Users</Image><!--Microsoft:Windows: technique_id=T1099,technique_name=Timestomp-->
+            <Image condition="begin with">C:\Windows\Temp</Image><!--Microsoft:Windows: technique_id=T1099,technique_name=Timestomp-->
+        </FileCreateTime>
+        <FileCreateTime onmatch="exclude">
+        </FileCreateTime>
+        <NetworkConnect onmatch="include">
+            <Image condition="image">Mavinject.exe</Image><!--Microsoft:Windows: technique_id=T1218,technique_name=Signed Binary Proxy Execution-->
+            <Image condition="image">SyncAppvPublishingServer.exe</Image><!--Microsoft:Windows: technique_id=T1218,technique_name=Signed Binary Proxy Execution-->
+            <Image condition="image">at.exe</Image><!--Microsoft:Windows: technique_id=T1053,technique_name=Scheduled Task-->
+            <Image condition="image">bitsadmin.exe</Image><!--Microsoft:Windows: technique_id=T1197,technique_name=BITS Jobs-->
+            <Image condition="image">certutil.exe</Image><!--Microsoft:Windows: technique_id=T1218,technique_name=Signed Binary Proxy Execution-->
+            <Image condition="image">cmd.exe</Image>
+            <Image condition="image">cscript.exe</Image><!--Microsoft:Windows: technique_id=T1218,technique_name=Signed Script Proxy Execution-->
+            <Image condition="image">driverquery.exe</Image>
+            <Image condition="image">dsquery.exe</Image>
+            <Image condition="image">hh.exe</Image>
+            <Image condition="image">hpsmhd.exe</Image><!--Microsoft:Windows: technique_id=T1021,technique_name=Remote Services-->
+            <Image condition="image">infDefaultInstall.exe</Image>
+            <Image condition="image">java.exe</Image>
+            <Image condition="image">javaw.exe</Image>
+            <Image condition="image">javaws.exe</Image>
+            <Image condition="image">mmc.exe</Image><!--Microsoft:Windows: technique_id=T1031,technique_name=Modify Existing Service-->
+            <Image condition="image">msbuild.exe</Image><!--Microsoft:Windows: technique_id=T1218,technique_name=Signed Binary Proxy Execution-->
+            <Image condition="image">mshta.exe</Image><!--Microsoft:Windows: technique_id=T1170,technique_name=Mshta-->
+            <Image condition="image">msiexec.exe</Image><!--Microsoft:Windows: technique_id=T1218,technique_name=Signed Binary Proxy Execution-->
+            <Image condition="image">nbtstat.exe</Image><!--Microsoft:Windows: technique_id=T1016,technique_name=System Network Configuration Discovery-->
+            <Image condition="image">net.exe</Image><!--Microsoft:Windows: technique_id=T1069,technique_name=Permission Groups Discovery-->
+            <Image condition="image">net1.exe</Image><!--Microsoft:Windows: technique_id=T1069,technique_name=Permission Groups Discovery-->
+            <Image condition="image">notepad.exe</Image><!--Microsoft:Windows: technique_id=T1218,technique_name=Signed Binary Proxy Execution-->
+            <Image condition="image">nslookup.exe</Image><!--Microsoft:Windows: technique_id=T1018,technique_name=Remote System Discovery-->
+            <Image condition="image">omniinet.exe</Image><!--Microsoft:Windows: technique_id=T1021,technique_name=Remote Services-->
+            <Image condition="image">powershell.exe</Image><!--Microsoft:Windows: technique_id=T1218,technique_name=Signed Binary Proxy Execution-->
+            <Image condition="image">psexec.exe</Image><!--Microsoft:Windows: technique_id=T1035,technique_name=Service Execution-->
+            <Image condition="image">psexesvc.exe</Image><!--Microsoft:Windows: technique_id=T1035,technique_name=Service Execution-->
+            <Image condition="image">qprocess.exe</Image><!--Microsoft:Windows: technique_id=T1057,technique_name=Process Discovery-->
+            <Image condition="image">qwinsta.exe</Image><!--Microsoft:Windows: technique_id=T1057,technique_name=Process Discovery-->
+            <Image condition="image">reg.exe</Image><!--Microsoft:Windows: technique_id=T1012,technique_name=Query Registry-->
+            <Image condition="image">regsvcs.exe</Image><!--Microsoft:Windows: technique_id=T1121,technique_name=Regsvcs/Regasm-->
+            <Image condition="image">regsvr32.exe</Image><!--Microsoft:Windows: technique_id=T1218,technique_name=Regsvr32-->
+            <Image condition="image">replace.exe</Image><!--Microsoft:Windows: technique_id=T1218,technique_name=Signed Binary Proxy Execution-->
+            <Image condition="image">rundll32.exe</Image><!--Microsoft:Windows: technique_id=T1085,technique_name=Rundll32-->
+            <Image condition="image">rwinsta.exe</Image><!--Microsoft:Windows: technique_id=T1057,technique_name=Process Discovery-->
+            <Image condition="image">sc.exe</Image><!--Microsoft:Windows: technique_id=T1031,technique_name=Modify Existing Service-->
+            <Image condition="image">schtasks.exe</Image><!--Microsoft:Windows: technique_id=T1053,technique_name=Scheduled Task-->
+            <Image condition="image">taskkill.exe</Image><!--Microsoft:Windows: technique_id=T1089,technique_name=Disabling Security Tools-->
+            <Image condition="image">tasklist.exe</Image><!--Microsoft:Windows: technique_id=T1057,technique_name=Process Discovery-->
+            <Image condition="image">tor.exe</Image>
+            <Image condition="image">vnc.exe</Image><!--Microsoft:Windows:technique_id=T1021,technique_name=Remote Services -->
+            <Image condition="image">vncservice.exe</Image><!--Microsoft:Windows: technique_id=T1021,technique_name=Remote Services-->
+            <Image condition="image">vncviewer.exe</Image><!--Microsoft:Windows: technique_id=T1021,technique_name=Remote Services-->
+            <Image condition="image">winexesvc.exe</Image><!--Microsoft:Windows: technique_id=T1035,technique_name=Service Execution-->
+            <Image condition="image">wmic.exe</Image><!--Microsoft:Windows: technique_id=T1047,technique_name=Windows Management Instrumentation-->
+            <Image condition="image">wscript.exe</Image><!--Microsoft:Windows: technique_id=T1218,technique_name=Signed Script Proxy Execution-->
+            <Image condition="begin with">C:\$Recycle.bin\</Image><!--Microsoft:Windows: technique_id=T1036,technique_name=Masquerading-->
+            <Image condition="begin with">C:\Intel\Logs\</Image><!--Microsoft:Windows: technique_id=T1036,technique_name=Masquerading-->
+            <Image condition="begin with">C:\PerfLogs\</Image><!--Microsoft:Windows: technique_id=T1036,technique_name=Masquerading-->
+            <Image condition="begin with">C:\ProgramData</Image><!--Microsoft:Windows: technique_id=T1036,technique_name=Masquerading-->
+            <Image condition="begin with">C:\Temp</Image><!--Microsoft:Windows: technique_id=T1036,technique_name=Masquerading-->
+            <Image condition="begin with">C:\Users\Default\</Image><!--Microsoft:Windows: technique_id=T1036,technique_name=Masquerading-->
+            <Image condition="begin with">C:\Users\NetworkService\</Image><!--Microsoft:Windows: technique_id=T1036,technique_name=Masquerading-->
+            <Image condition="begin with">C:\Users\Public\</Image><!--Microsoft:Windows: technique_id=T1036,technique_name=Masquerading-->
+            <Image condition="begin with">C:\Users</Image><!--Microsoft:Windows: technique_id=T1036,technique_name=Masquerading-->
+            <Image condition="begin with">C:\Windows\Debug\</Image><!--Microsoft:Windows: technique_id=T1036,technique_name=Masquerading-->
+            <Image condition="begin with">C:\Windows\Fonts\</Image><!--Microsoft:Windows: technique_id=T1036,technique_name=Masquerading-->
+            <Image condition="begin with">C:\Windows\Help\</Image><!--Microsoft:Windows: technique_id=T1036,technique_name=Masquerading-->
+            <Image condition="begin with">C:\Windows\Media\</Image><!--Microsoft:Windows: technique_id=T1036,technique_name=Masquerading-->
+            <Image condition="begin with">C:\Windows\Temp</Image><!--Microsoft:Windows: technique_id=T1036,technique_name=Masquerading-->
+            <Image condition="begin with">C:\Windows\addins\</Image><!--Microsoft:Windows: technique_id=T1036,technique_name=Masquerading-->
+            <Image condition="begin with">C:\Windows\repair\</Image><!--Microsoft:Windows: technique_id=T1036,technique_name=Masquerading-->
+            <Image condition="begin with">C:\Windows\security\</Image><!--Microsoft:Windows: technique_id=T1036,technique_name=Masquerading-->
+            <Image condition="begin with">C:\Windows\system32\config\systemprofile\</Image><!--Microsoft:Windows: -->
+            <Image condition="contains">\htdocs\</Image><!--Microsoft:Windows: -->
+            <Image condition="contains">\wwwroot\</Image><!--Microsoft:Windows: technique_id=T1036,technique_name=Masquerading-->
+        </NetworkConnect>
+        <NetworkConnect onmatch="exclude">
+		<Image condition="image">dsa.exe</Image>								 
+        </NetworkConnect>
+        <ProcessTerminate onmatch="include">
+            <Image condition="begin with">C:\Temp</Image>
+            <Image condition="begin with">C:\Users</Image>
+            <Image condition="begin with">C:\Windows\Temp</Image>
+        </ProcessTerminate>
+        <ProcessTerminate onmatch="exclude">
+        </ProcessTerminate>
+        <DriverLoad onmatch="include">
+        </DriverLoad>
+        <DriverLoad onmatch="exclude">
+        </DriverLoad>
+        <ImageLoad onmatch="include">
+        </ImageLoad>
+        <ImageLoad onmatch="exclude">
+        </ImageLoad>
+        <CreateRemoteThread onmatch="include">
+            <StartFunction condition="contains">LoadLibrary</StartFunction><!--Microsoft:Windows: technique_id=T1055,technique_name=Process Injection-->
+        </CreateRemoteThread>
+        <CreateRemoteThread onmatch="exclude">
+        </CreateRemoteThread>
+        <RawAccessRead onmatch="include">
+        </RawAccessRead>
+        <RawAccessRead onmatch="exclude">
+        </RawAccessRead>
+        <ProcessAccess onmatch="include">
+		<TargetImage condition="is">C:\Windows\system32\lsass.exe</TargetImage>
+        </ProcessAccess>
+        <ProcessAccess onmatch="exclude">
+		<SourceImage condition="is">C:\windows\system32\svchost.exe</SourceImage>
+		<SourceImage condition="image">dsa.exe</SourceImage>
+		<SourceImage condition="image">CollectGuestLogs.exe</SourceImage>
+		<SourceImage condition="image">NetworkList64.exe</SourceImage>
+		<SourceImage condition="is">C:\Program Files\Trend Micro\AMSP\coreServiceShell.exe</SourceImage>
+        </ProcessAccess>
+		
+        <FileCreate onmatch="include">
+            <Image condition="image">rundll32.exe</Image>
+            <Image condition="begin with">C:\WINDOWS\system32\wbem\scrcons.exe</Image><!--Microsoft:Windows: technique_id=T1047,technique_name=Windows Management Instrumentation-->
+            <TargetFilename condition="begin with">C:\Users</TargetFilename>
+            <TargetFilename condition="begin with">C:\Windows\SysWOW64\Drivers</TargetFilename>
+            <TargetFilename condition="begin with">C:\Windows\SysWOW64\Wbem</TargetFilename><!--Microsoft:Windows: technique_id=T1047,technique_name=Windows Management Instrumentation-->
+            <TargetFilename condition="begin with">C:\Windows\SysWOW64\WindowsPowerShell</TargetFilename><!--Microsoft:Windows: technique_id=T1086,technique_name=PowerShell-->
+            <TargetFilename condition="begin with">C:\Windows\System32\Drivers</TargetFilename><!--Microsoft:Windows: -->
+            <TargetFilename condition="begin with">C:\Windows\System32\GroupPolicy\Machine\Scripts</TargetFilename>
+            <TargetFilename condition="begin with">C:\Windows\System32\GroupPolicy\User\Scripts</TargetFilename>
+            <TargetFilename condition="begin with">C:\Windows\System32\Tasks</TargetFilename>
+            <TargetFilename condition="begin with">C:\Windows\System32\Wbem</TargetFilename><!--Microsoft:Windows: technique_id=T1047,technique_name=Windows Management Instrumentation-->
+            <TargetFilename condition="begin with">C:\Windows\System32\WindowsPowerShell</TargetFilename><!--Microsoft:Windows: technique_id=T1086,technique_name=PowerShell-->
+            <TargetFilename condition="begin with">C:\Windows\Tasks\</TargetFilename>
+            <TargetFilename condition="contains">C:\Windows\AppPatch\Custom</TargetFilename><!--Microsoft:Windows: technique_id=T1138,technique_name=Application Shimming-->
+            <TargetFilename condition="contains">Content.Outlook</TargetFilename>
+            <TargetFilename condition="contains">Downloads</TargetFilename>
+            <TargetFilename condition="contains">Temp\7z</TargetFilename>
+            <TargetFilename condition="contains">\Content.Outlook\</TargetFilename>
+            <TargetFilename condition="contains">\Downloads\</TargetFilename>
+            <TargetFilename condition="contains">\Start Menu</TargetFilename>
+            <TargetFilename condition="contains">\Startup</TargetFilename>
+            <TargetFilename condition="end with">.*proj</TargetFilename><!--Microsoft:Windows: technique_id=T1127,technique_name=Trusted Developer Utilities-->
+            <TargetFilename condition="end with">.7z</TargetFilename>
+			<TargetFilename condition="end with">.application</TargetFilename>
+            <TargetFilename condition="end with">.appref-ms</TargetFilename>
+            <TargetFilename condition="end with">.bat</TargetFilename>
+            <TargetFilename condition="end with">.chm</TargetFilename><!--Microsoft:Windows: technique_id=T1064,technique_name=Scripting-->
+            <TargetFilename condition="end with">.cmd</TargetFilename>
+            <TargetFilename condition="end with">.docm</TargetFilename>
+            <TargetFilename condition="end with">.dotm</TargetFilename>
+            <TargetFilename condition="end with">.exe</TargetFilename>
+			<TargetFilename condition="end with">.gz</TargetFilename>
+            <TargetFilename condition="end with">.hta</TargetFilename><!--Microsoft:Windows: technique_id=T1170,technique_name=Mshta-->
+            <TargetFilename condition="end with">.iqy</TargetFilename>
+            <TargetFilename condition="end with">.lnk</TargetFilename>
+            <TargetFilename condition="end with">.potm</TargetFilename>
+            <TargetFilename condition="end with">.ppsm</TargetFilename>
+            <TargetFilename condition="end with">.pptm</TargetFilename>
+            <TargetFilename condition="end with">.ps1</TargetFilename><!--Microsoft:Windows: technique_id=T1086,technique_name=PowerShell-->
+            <TargetFilename condition="end with">.ps2</TargetFilename><!--Microsoft:Windows: technique_id=T1086,technique_name=PowerShell-->
+            <TargetFilename condition="end with">.py</TargetFilename>
+            <TargetFilename condition="end with">.pyc</TargetFilename>
+            <TargetFilename condition="end with">.pyw</TargetFilename>
+            <TargetFilename condition="end with">.reg</TargetFilename>
+            <TargetFilename condition="end with">.scf</TargetFilename><!--Microsoft:Windows: technique_id=T1187,technique_name=Forced Authentication-->
+            <TargetFilename condition="end with">.settingcontent-ms</TargetFilename>
+            <TargetFilename condition="end with">.sldm</TargetFilename>
+            <TargetFilename condition="end with">.slk</TargetFilename>
+            <TargetFilename condition="end with">.sln</TargetFilename><!--Microsoft:Windows: technique_id=T1127,technique_name=Trusted Developer Utilities-->
+            <TargetFilename condition="end with">.sys</TargetFilename>
+			<TargetFilename condition="end with">.tar</TargetFilename>
+            <TargetFilename condition="end with">.vb</TargetFilename>
+            <TargetFilename condition="end with">.vbe</TargetFilename>
+            <TargetFilename condition="end with">.vbs</TargetFilename>
+            <TargetFilename condition="end with">.xla</TargetFilename>
+            <TargetFilename condition="end with">.xlam</TargetFilename>
+            <TargetFilename condition="end with">.xlm</TargetFilename>
+            <TargetFilename condition="end with">.xlsm</TargetFilename>
+            <TargetFilename condition="end with">.xltm</TargetFilename>
+			<TargetFilename condition="end with">.zip</TargetFilename>
+			<TargetFilename condition="end with">.zlib</TargetFilename>
+            <TargetFilename condition="end with">Temp\debug.bin</TargetFilename>
+	        <TargetFilename condition="end with">.rtf</TargetFilename>
+	        <TargetFilename condition="end with">.ppt</TargetFilename>
+	        <TargetFilename condition="end with">.xls</TargetFilename>
+	        <TargetFilename condition="end with">.jar</TargetFilename>
+	        <TargetFilename name="DLL" condition="end with">.dll</TargetFilename>
+	        <TargetFilename condition="end with">.jse</TargetFilename>															   
+        </FileCreate>
+        <FileCreate onmatch="exclude">
+		<Image condition="image">dsa.exe</Image>
+        </FileCreate>
+        <RegistryEvent onmatch="include">
+            <TargetObject condition="begin with">HKLM\SOFTWARE\Microsoft\Cryptography\OID</TargetObject><!--Microsoft:Windows: technique_id=T1198,technique_name=SIP and Trust Provider Hijacking-->
+            <TargetObject condition="begin with">HKLM\SOFTWARE\Microsoft\Cryptography\Providers\Trust</TargetObject><!--Microsoft:Windows: technique_id=T1198,technique_name=SIP and Trust Provider Hijacking-->
+            <TargetObject condition="begin with">HKLM\SOFTWARE\Microsoft\EnterpriseCertificates\Root\Certificates</TargetObject><!--Microsoft:Windows: technique_id=T1130,technique_name=Install Root Certificate-->
+            <TargetObject condition="begin with">HKLM\SOFTWARE\Microsoft\Security Center\AllAlertsDisabled</TargetObject><!--Microsoft:Windows: technique_id=T1089,technique_name=Disabling Security Tools-->
+            <TargetObject condition="begin with">HKLM\SOFTWARE\Microsoft\Security Center\AntiVirusDisableNotify</TargetObject><!--Microsoft:Windows: technique_id=T1089,technique_name=Disabling Security Tools-->
+            <TargetObject condition="begin with">HKLM\SOFTWARE\Microsoft\Security Center\DisableMonitoring</TargetObject><!--Microsoft:Windows: technique_id=T1089,technique_name=Disabling Security Tools-->
+            <TargetObject condition="begin with">HKLM\SOFTWARE\Microsoft\Security Center\FirewallDisableNotify</TargetObject><!--Microsoft:Windows: technique_id=T1089,technique_name=Disabling Security Tools-->
+            <TargetObject condition="begin with">HKLM\SOFTWARE\Microsoft\Security Center\FirewallOverride</TargetObject><!--Microsoft:Windows: technique_id=T1089,technique_name=Disabling Security Tools-->
+            <TargetObject condition="begin with">HKLM\SOFTWARE\Microsoft\Security Center\UacDisableNotify</TargetObject><!--Microsoft:Windows: technique_id=T1088,technique_name=Bypass User Account Control-->
+            <TargetObject condition="begin with">HKLM\SOFTWARE\Microsoft\Security Center\UpdatesDisableNotify</TargetObject><!--Microsoft:Windows: technique_id=T1088,technique_name=Bypass User Account Control-->
+            <TargetObject condition="begin with">HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options</TargetObject>
+            <TargetObject condition="begin with">HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkList\Profiles</TargetObject>
+            <TargetObject condition="begin with">HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Windows\Appinit_Dlls</TargetObject><!--Microsoft:Windows: technique_id=T1103,technique_name=Appinit DLLs-->
+            <TargetObject condition="begin with">HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\GPExtensions</TargetObject>
+            <TargetObject condition="begin with">HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\Notify</TargetObject><!--Microsoft:Windows: technique_id=T1004,technique_name=Winlogon Helper DLL-->
+            <TargetObject condition="begin with">HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\Shell</TargetObject><!--Microsoft:Windows: technique_id=T1004,technique_name=Winlogon Helper DLL-->
+            <TargetObject condition="begin with">HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\Userinit</TargetObject><!--Microsoft:Windows: technique_id=T1004,technique_name=Winlogon Helper DLL-->
+            <TargetObject condition="begin with">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths</TargetObject>
+            <TargetObject condition="begin with">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Authentication\Credential Provider</TargetObject>
+            <TargetObject condition="begin with">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System</TargetObject><!--Microsoft:Windows: technique_id=T1088,technique_name=Bypass User Account Control-->
+            <TargetObject condition="begin with">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT</TargetObject>
+            <TargetObject condition="begin with">HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\DisableAntiSpyware</TargetObject><!--Microsoft:Windows: technique_id=T1089,technique_name=Disabling Security Tools-->
+            <TargetObject condition="begin with">HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\DisableAntiVirus</TargetObject><!--Microsoft:Windows: technique_id=T1089,technique_name=Disabling Security Tools-->
+            <TargetObject condition="begin with">HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection\DisableBehaviorMonitoring</TargetObject><!--Microsoft:Windows: technique_id=T1089,technique_name=Disabling Security Tools-->
+            <TargetObject condition="begin with">HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection\DisableOnAccessProtection</TargetObject><!--Microsoft:Windows: technique_id=T1089,technique_name=Disabling Security Tools-->
+            <TargetObject condition="begin with">HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection\DisableScanOnRealtimeEnable</TargetObject><!--Microsoft:Windows: technique_id=T1089,technique_name=Disabling Security Tools-->
+            <TargetObject condition="begin with">HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet\SpyNetReporting</TargetObject><!--Microsoft:Windows: technique_id=T1089,technique_name=Disabling Security Tools-->
+            <TargetObject condition="begin with">HKLM\SOFTWARE\Policies\Microsoft\Windows Defender</TargetObject><!--Microsoft:Windows: technique_id=T1089,technique_name=Disabling Security Tools-->
+            <TargetObject condition="begin with">HKLM\SOFTWARE\WOW6432Node\Microsoft\Cryptography\OID</TargetObject><!--Microsoft:Windows: technique_id=T1198,technique_name=SIP and Trust Provider Hijacking-->
+            <TargetObject condition="begin with">HKLM\SOFTWARE\WOW6432Node\Microsoft\Cryptography\Providers\Trust</TargetObject><!--Microsoft:Windows: technique_id=T1198,technique_name=SIP and Trust Provider Hijacking-->
+            <TargetObject condition="begin with">HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows NT\CurrentVersion\Drivers32</TargetObject>
+            <TargetObject condition="begin with">HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows NT\CurrentVersion\Image File Execution Options</TargetObject><!--Microsoft:Windows: technique_id=T1183,technique_name=Image File Execution Options Injection-->
+            <TargetObject condition="begin with">HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows NT\CurrentVersion\Windows\Appinit_Dlls</TargetObject><!--Microsoft:Windows: technique_id=T1103,technique_name=Appinit DLLs-->
+            <TargetObject condition="begin with">HKLM\SYSTEM\CurrentControlSet\Control\Lsa</TargetObject>
+            <TargetObject condition="begin with">HKLM\SYSTEM\CurrentControlSet\Control\NetworkProvider\Order</TargetObject>
+            <TargetObject condition="begin with">HKLM\SYSTEM\CurrentControlSet\Control\Print\Monitors</TargetObject><!--Microsoft:Windows: technique_id=T1013,technique_name=Forced Authentication-->
+            <TargetObject condition="begin with">HKLM\SYSTEM\CurrentControlSet\Control\Safeboot</TargetObject>
+            <TargetObject condition="begin with">HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SecurityProviders</TargetObject><!--Microsoft:Windows: technique_id=T1003,technique_name=Credential Dumping-->
+            <TargetObject condition="begin with">HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\AppCertDlls</TargetObject><!--Microsoft:Windows: technique_id=T1182,technique_name=AppCert DLLs-->
+            <TargetObject condition="begin with">HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\BootExecute</TargetObject><!--Microsoft:Windows: technique_id=T1060,technique_name=Registry Run Keys / Start Folder-->
+            <TargetObject condition="begin with">HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp\InitialProgram</TargetObject><!--Microsoft:Windows: technique_id=T1060,technique_name=Registry Run Keys / Start Folder-->
+            <TargetObject condition="begin with">HKLM\SYSTEM\CurrentControlSet\Control\Winlogon</TargetObject>
+            <TargetObject condition="begin with">HKLM\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\StandardProfile\AuthorizedApplications\List</TargetObject><!--Microsoft:Windows: technique_id=T1089,technique_name=Disabling Security Tools-->
+            <TargetObject condition="begin with">HKLM\SYSTEM\CurrentControlSet\Services\WinSock</TargetObject>
+            <TargetObject condition="begin with">HKLM\Software\Microsoft\Windows NT\CurrentVersion\Image File Execution Options</TargetObject><!--Microsoft:Windows: technique_id=T1183,technique_name=Image File Execution Options Injection-->
+            <TargetObject condition="begin with">HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\System\EnableLUA</TargetObject><!--Microsoft:Windows: technique_id=T1088,technique_name=Bypass User Account Control-->
+            <TargetObject condition="begin with">HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\System\LocalAccountTokenFilterPolicy</TargetObject><!--Microsoft:Windows: technique_id=T1088,technique_name=Bypass User Account Control-->
+            <TargetObject condition="begin with">HKLM\Software\Microsoft\Windows\CurrentVersion\explorer\ShellExecuteHooks</TargetObject>
+            <TargetObject condition="begin with">HKLM\Software\Microsoft\Windows\CurrentVersion\explorer\ShellServiceObjectDelayLoad</TargetObject>
+            <TargetObject condition="contains">Classes\exefile\shell\runas\command\isolatedCommand</TargetObject><!--Microsoft:Windows: technique_id=T1088,technique_name=Bypass User Account Control-->
+            <TargetObject condition="contains">HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\W32Time\TimeProviders</TargetObject><!--Microsoft:Windows: technique_id=T1209,technique_name=Time Providers-->
+            <TargetObject condition="contains">HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Custom</TargetObject><!--Microsoft:Windows: technique_id=T1138,technique_name=Application Shimming-->
+            <TargetObject condition="contains">HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\InstalledSDB</TargetObject><!--Microsoft:Windows: technique_id=T1138,technique_name=Application Shimming-->
+            <TargetObject condition="contains">SOFTWARE\Microsoft\Netsh</TargetObject><!--Microsoft:Windows: technique_id=T1128,technique_name=Netsh Helper DLL-->
+            <TargetObject condition="contains">SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\LSASS.exe</TargetObject><!--Microsoft:Windows: technique_id=T1101,technique_name=Security Support Provider-->
+            <TargetObject condition="contains">SYSTEM\CurrentControlSet\Control\CrashControl</TargetObject><!--Microsoft:Windows: technique_id=T1047,technique_name=Windows Management Instrumentation-->
+            <TargetObject condition="contains">SYSTEM\CurrentControlSet\services\SysmonDrv</TargetObject><!--Microsoft:Windows: technique_id=T1089,technique_name=Disabling Security Tools-->
+            <TargetObject condition="contains">SYSTEM\CurrentControlSet\services\Sysmon</TargetObject><!--Microsoft:Windows: technique_id=T1089,technique_name=Disabling Security Tools-->
+            <TargetObject condition="contains">Software\Classes\CLSID</TargetObject><!--Microsoft:Windows: technique_id=T1122,technique_name=Component Object Model Hijacking-->
+            <TargetObject condition="contains">\Browser Helper Objects</TargetObject>
+            <TargetObject condition="contains">\Classes\AllFilesystemObjects</TargetObject>
+            <TargetObject condition="contains">\Classes\Directory</TargetObject>
+            <TargetObject condition="contains">\Classes\Drive</TargetObject>
+            <TargetObject condition="contains">\Classes\Folder</TargetObject>
+            <TargetObject condition="contains">\ContextMenuHandlers</TargetObject>
+            <TargetObject condition="contains">\Control\SecurityProviders\WDigest</TargetObject><!--Microsoft:Windows: technique_id=T1003,technique_name=Credential Dumping-->
+            <TargetObject condition="contains">\CurrentVersion\Run</TargetObject><!--Microsoft:Windows: technique_id=T1060,technique_name=Registry Run Keys / Start Folder-->
+            <TargetObject condition="contains">\CurrentVersion\Shell</TargetObject>
+            <TargetObject condition="contains">\Explorer\FileExts</TargetObject><!--Microsoft:Windows: technique_id=T1042,technique_name=Change Default File Association-->
+            <TargetObject condition="contains">\Group Policy\Scripts</TargetObject>
+            <TargetObject condition="contains">\Internet Explorer\Extensions</TargetObject>
+            <TargetObject condition="contains">\Internet Explorer\Toolbar</TargetObject>
+            <TargetObject condition="contains">\Microsoft\Office\Outlook\Addins</TargetObject>
+            <TargetObject condition="contains">\Microsoft\SystemCertificates\Root\Certificates</TargetObject><!--Microsoft:Windows: technique_id=T1130,technique_name=Install Root Certificate-->
+            <TargetObject condition="contains">\Policies\Explorer\Run</TargetObject><!--Microsoft:Windows: technique_id=T1060,technique_name=Registry Run Keys / Start Folder-->
+            <TargetObject condition="contains">\Windows\System\Scripts</TargetObject><!--Microsoft:Windows: technique_id=T1037,technique_name=Logon Scripts-->
+            <TargetObject condition="contains">\mscfile\shell\open\command</TargetObject><!--Microsoft:Windows: technique_id=T1088,technique_name=Bypass User Account Control-->
+            <TargetObject condition="contains">\services\Netlogon\Parameters\DisablePasswordChange</TargetObject><!--Microsoft:Windows: technique_id=T1098,technique_name=Account Manipulation-->
+            <TargetObject condition="contains">\shell\install\command</TargetObject>
+            <TargetObject condition="contains">\shell\open\command</TargetObject>
+            <TargetObject condition="contains">\shell\open\ddeexec</TargetObject>
+            <TargetObject condition="contains">ms-settings\shell\open\command</TargetObject><!--Microsoft:Windows: technique_id=T1088,technique_name=Bypass User Account Control-->
+            <TargetObject condition="contains">{AB8902B4-09CA-4bb6-B78D-A8F59079A8D5}</TargetObject>
+            <TargetObject condition="end with">\FriendlyName</TargetObject>
+            <TargetObject condition="end with">\ImagePath</TargetObject>
+            <TargetObject condition="end with">\InprocServer32\(Default)</TargetObject>
+            <TargetObject condition="end with">\ProxyServer</TargetObject>
+            <TargetObject condition="end with">\PsExec\EulaAccepted</TargetObject><!--Microsoft:Windows: technique_id=T1035,technique_name=Service Execution-->
+            <TargetObject condition="end with">\PsFile\EulaAccepted</TargetObject><!--Microsoft:Windows: technique_id=T1105,technique_name=Remote File Copy-->
+            <TargetObject condition="end with">\PsGetSID\EulaAccepted</TargetObject><!--Microsoft:Windows: technique_id=T1033,technique_name=System Owner/User Discovery-->
+            <TargetObject condition="end with">\PsInfo\EulaAccepted</TargetObject><!--Microsoft:Windows: technique_id=T1057,technique_name=Process Discovery-->
+            <TargetObject condition="end with">\PsKill\EulaAccepted</TargetObject><!--Microsoft:Windows: technique_id=T1089,technique_name=Disabling Security Tools-->
+            <TargetObject condition="end with">\PsList\EulaAccepted</TargetObject><!--Microsoft:Windows: technique_id=T1057,technique_name=Process Discovery-->
+            <TargetObject condition="end with">\PsLogList\EulaAccepted</TargetObject><!--Microsoft:Windows: technique_id=T1035,technique_name=Service Execution-->
+            <TargetObject condition="end with">\PsLoggedOn\EulaAccepted</TargetObject><!--Microsoft:Windows: technique_id=T1033,technique_name=System Owner/User Discovery-->
+            <TargetObject condition="end with">\PsPasswd\EulaAccepted</TargetObject><!--Microsoft:Windows: technique_id=T1098,technique_name=Account Manipulation-->
+            <TargetObject condition="end with">\PsService\EulaAccepted</TargetObject><!--Microsoft:Windows: technique_id=T1035,technique_name=Service Execution-->
+            <TargetObject condition="end with">\PsShutDown\EulaAccepted</TargetObject><!--Microsoft:Windows: -->
+            <TargetObject condition="end with">\PsSuspend\EulaAccepted</TargetObject><!--Microsoft:Windows: -->
+            <TargetObject condition="end with">\ServiceDll</TargetObject>
+            <TargetObject condition="end with">\Start</TargetObject>
+            <TargetObject condition="end with">\UrlUpdateInfo</TargetObject>
+        </RegistryEvent>
+        <RegistryEvent onmatch="exclude">
+		<Image condition="image">dsa.exe</Image>
+        </RegistryEvent>
+        <FileCreateStreamHash onmatch="include">
+        </FileCreateStreamHash>
+        <FileCreateStreamHash onmatch="exclude">
+        </FileCreateStreamHash>
+        <PipeEvent onmatch="include">
+            <PipeName condition="contains">\46a676ab7f179e511e30dd2dc41bd388</PipeName><!--Microsoft:Windows: technique_id=T1055,technique_name=Process Injection-->
+            <PipeName condition="contains">\9f81f59bc58452127884ce513865ed20</PipeName><!--Microsoft:Windows: technique_id=T1055,technique_name=Process Injection-->
+            <PipeName condition="contains">\NamePipe_MoreWindows</PipeName><!--Microsoft:Windows: technique_id=T1055,technique_name=Process Injection-->
+            <PipeName condition="contains">\ahexec</PipeName><!--Microsoft:Windows: technique_id=T1055,technique_name=Process Injection-->
+            <PipeName condition="contains">\e710f28d59aa529d6792ca6ff0ca1b34</PipeName><!--Microsoft:Windows: technique_id=T1055,technique_name=Process Injection"-->
+            <PipeName condition="contains">\isapi_dg2</PipeName><!--Microsoft:Windows: technique_id=T1055,technique_name=Process Injection-->
+            <PipeName condition="contains">\isapi_dg</PipeName><!--Microsoft:Windows: technique_id=T1055,technique_name=Process Injection-->
+            <PipeName condition="contains">\isapi_http</PipeName><!--Microsoft:Windows: technique_id=T1055,technique_name=Process Injection-->
+            <PipeName condition="contains">\lsassw</PipeName><!--Microsoft:Windows: technique_id=T1055,technique_name=Process Injection-->
+            <PipeName condition="contains">\pcheap_reuse</PipeName><!--Microsoft:Windows: technique_id=T1055,technique_name=Process Injection-->
+            <PipeName condition="contains">\rpchlp_3</PipeName><!--Microsoft:Windows: technique_id=T1055,technique_name=Process Injection-->
+            <PipeName condition="contains">\sdlrpc</PipeName><!--Microsoft:Windows: technique_id=T1055,technique_name=Process Injection-->
+            <PipeName condition="contains">\winsession</PipeName><!--Microsoft:Windows: technique_id=T1055,technique_name=Process Injection -->
+        </PipeEvent>
+        <PipeEvent onmatch="exclude">
+        </PipeEvent>
+        <WmiEvent onmatch="exclude">
+        </WmiEvent>
+    </EventFiltering>
+</Sysmon>
