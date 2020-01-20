@@ -17,7 +17,7 @@ Official support from Trend Micro is not available. Individual contributors may 
 
  
 
-If you have questions about using the dsm policy, consider asking on Stack Overflow. Tag your question with deepsecurity and it will get pushed to our internal automation support Slack channel.
+If you have questions about using the dsm policy, consider asking on [Stack Overflow]: https://stackoverflow.com/questions/tagged/deepsecurity. Tag your question with deepsecurity and it will get pushed to our internal automation support Slack channel.
 
  
 
